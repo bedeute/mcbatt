@@ -1,6 +1,6 @@
 .mi-slider {
 	position: relative;
-	height: 490px;
+	height: 200px;
 }
 
 .mi-slider ul {
@@ -8,7 +8,8 @@
 	position: absolute;
 	width: 100%;
 	left: 0;
-	bottom: 140px;
+	// bottom: 140px;
+	top: 0;
 	overflow: hidden;
 	text-align: center;
 	pointer-events: none;
@@ -73,11 +74,12 @@
 
 .mi-slider nav {
 	position: relative;
-	top: 400px;
+	// top: 400px;
 	text-align: center;
-	max-width: 800px;
+	// max-width: 800px;
 	margin: 0 auto;
-	border-top: 5px solid #333;
+	top: -37px;
+	// border-top: 5px solid #333;
 }
 
 .no-js nav {
@@ -86,11 +88,19 @@
 
 .mi-slider nav a {
 	display: inline-block;
-	text-transform: uppercase;
-	letter-spacing: 5px;
-	padding: 40px 30px 30px 34px;
+	background-color: #fff;
+	// text-transform: uppercase;
+	letter-spacing: 2px;
+	// padding: 40px 30px 30px 34px;
+	padding: 6px 20px;
+	margin: 0 4px;
 	position: relative;
 	color: #888;
+	border-top: 1px solid @gray-light;
+	border-left: 1px solid @gray-light;
+	border-right: 1px solid @gray-light;
+	border-bottom: 1px solid @gray-light;
+	.border-top-radius(5px);
 	outline: none;
 	-webkit-transition: color 0.2s linear;
 	transition: color 0.2s linear;
@@ -99,35 +109,36 @@
 .mi-slider nav a:hover,
 .mi-slider nav a.mi-selected {
 	color: #000;
+	border-bottom: 1px solid #fff;
 }
 
-.mi-slider nav a.mi-selected:after,
-.mi-slider nav a.mi-selected:before {
-	content: '';
-	position: absolute;
-	top: -5px;
-	border: solid transparent;
-	height: 0;
-	width: 0;
-	position: absolute;
-	pointer-events: none;
-}
+// .mi-slider nav a.mi-selected:after,
+// .mi-slider nav a.mi-selected:before {
+// 	content: '';
+// 	position: absolute;
+// 	top: -5px;
+// 	border: solid transparent;
+// 	height: 0;
+// 	width: 0;
+// 	position: absolute;
+// 	pointer-events: none;
+// }
 
-.mi-slider nav a.mi-selected:after {
-	border-color: transparent;
-	border-top-color: #fff;
-	border-width: 20px;
-	left: 50%;
-	margin-left: -20px;
-}
+// .mi-slider nav a.mi-selected:after {
+// 	border-color: transparent;
+// 	border-top-color: #fff;
+// 	border-width: 20px;
+// 	left: 50%;
+// 	margin-left: -20px;
+// }
 
-.mi-slider nav a.mi-selected:before {
-	border-color: transparent;
-	border-top-color: #333;
-	border-width: 27px;
-	left: 50%;
-	margin-left: -27px;
-}
+// .mi-slider nav a.mi-selected:before {
+// 	border-color: transparent;
+// 	border-top-color: #333;
+// 	border-width: 27px;
+// 	left: 50%;
+// 	margin-left: -27px;
+// }
 
 /* Move classes and animations */
 
@@ -326,4 +337,3 @@
 		display: none;
 	}
 }
-
