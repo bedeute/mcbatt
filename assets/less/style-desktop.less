@@ -1,5 +1,6 @@
 body {
 	background: #eee url("../img/pattern.jpg");
+	height: 100%;
 }
 
 @media (min-width: 768px) {
@@ -55,12 +56,75 @@ body {
 }
 
 .showcase {
-	margin-top: -50px;
+	margin-top: -100px;
+
+	.ls-nav {
+		margin-right: auto;
+		margin-left: auto;
+		width: 96%;
+
+		#main-slider-nav-ul {
+
+			a {
+				padding: 6px 40px;
+				.border-top-radius(6px);
+			}
+		}
+	}
+
+
+	.product-slider {
+
+		li {
+			padding-right: 7px;
+			padding-left: 7px;
+
+			a {
+				text-decoration: none;
+
+				img {
+					margin: 6px 3px; 
+				}
+			}	
+		}
+	}
+
+	.liquid-slider {
+		background: rgba(255, 255, 255, 0.5);
+		height: 200px;
+		.border-top-radius(20px);
+		.border-bottom-radius(20px);
+		border: 3px solid #f2f2f2;
+		.box-shadow(inset 0px 1px 5px 1px rgba(0, 0, 0, 0.18));
+
+		.main-slider-panel {
+			background: transparent;
+		}
+	}
 }
 
-footer {
+#wrap {
+    min-height: 100%;
+    height: auto !important;
+    height: 100%;
+    /* Negative indent footer by it's height */
+    margin: 0 auto -30px;
+  }
+
+  /* Set the fixed height of the footer here */
+  #push,
+  #footer {
+    height: 30px;
+  }
+
+#footer {
 	font-size: 12px;
 	border-top: 1px solid blue;
 	padding: 8px 0;
 	#gradient > .horizontal-three-colors(orange, yellow, 50%, orange);
+}
+
+.navbar-main {
+	width: 86%;
+	margin: -30px auto 0;
 }
