@@ -69,6 +69,14 @@ body {
 .showcase {
 	margin-top: -100px;
 
+	.ls-nav-left-arrow{
+		margin-left: 14px;
+	}
+
+	.ls-nav-right-arrow{
+		margin-right: 14px;
+	}
+
 	.ls-nav {
 		margin-right: auto;
 		margin-left: auto;
@@ -87,8 +95,8 @@ body {
 	.product-slider {
 
 		li {
-			padding-right: 7px;
-			padding-left: 7px;
+			padding-right: 6px;
+			padding-left: 6px;
 
 			a {
 				text-decoration: none;
@@ -106,18 +114,44 @@ body {
 		.border-top-radius(20px);
 		.border-bottom-radius(20px);
 		border: 3px solid #f2f2f2;
-		.box-shadow(inset 0px 1px 5px 1px rgba(0, 0, 0, 0.18));
+		.box-shadow(~"inset 0px 1px 8px 1px rgba(0, 0, 0, 0.25), 0 2px 3px 1px rgba(0, 0, 0, 0.2)");
+		margin: 0 4px 4px;
+		width: 99%;
+	}
 
 		.main-slider-panel {
 			background: transparent;
 		}
-	}
 }
 
 .navbar-main {
 	.border-top-radius(16px);
 	.border-bottom-radius(16px);
-	#gradient > .vertical-three-colors(#FE7F18, #FBA14B, 50%, #FE7F18);
+	#gradient > .vertical-three-colors(#FE7F18, #FBA14B, 20%, #FE7F18);
+	.box-shadow(0 0 1px 1px rgba(0, 0, 0, 0.2));
+	border: 1px solid #FE7F18;
+
+	.navbar-nav {
+
+		li {
+
+			&.active > a,
+			&.active > a:hover { 
+				background-color: transparent;
+				color: #fff;
+			}
+
+			a {
+				padding: 14px 27px;
+				color: #eee;
+				text-shadow: 0 1px 1px rgba(0, 0, 0, 0.2);
+
+				&:hover {
+					color: #fff;
+				}
+			}
+		}
+	}
 }
 
 
@@ -133,6 +167,6 @@ footer {
 }
 
 .navbar-main {
-	width: 86%;
+	width: 80%;
 	margin: -30px auto 0;
 }
