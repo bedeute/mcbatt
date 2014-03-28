@@ -20,17 +20,19 @@ body {
 }
 
 .gradient-marker {
+	z-index: 1;
 	height: 10px;
 	width: 100%;
-	background: orange;
-	.box-shadow(0 1px 3px rgba(0, 0, 0, 0.2));
+	background: #f78203;
+	.box-shadow(0 1px 2px 1px rgba(0, 0, 0, 0.3));
+	position: relative;
 
 
 	.gradient-marker-top {
 		height: 10px;
 		width: 960px;
 		margin: 0 auto;
-		#gradient > .horizontal-three-colors(orange, yellow, 50%, orange);
+		#gradient > .horizontal-three-colors(#f78203, #fedf0e, 50%, #f78203);
 
 	}		
 }
@@ -100,6 +102,17 @@ body {
 
 			a {
 				text-decoration: none;
+				color: @mainOrange;
+
+				&:hover{
+
+					color: lighten(spin(@mainOrange, 5), 10%);
+
+					img {
+						.opacity(.8);
+					}
+				}
+					
 
 				img {
 					margin: 6px 3px; 
@@ -154,6 +167,13 @@ body {
 	}
 }
 
+.shadow-main-navbar {
+	background: url(../img/shadow_main_navbar.png) top transparent;
+	width: 670px;
+	height: 12px;
+	margin: 1px auto;
+}
+
 
 footer {
 	height: 30px;
@@ -161,9 +181,9 @@ footer {
 	bottom: 0;
 	width: 100%;
 	font-size: 12px;
-	border-top: 1px solid blue;
-	padding: 8px 0;
-	#gradient > .horizontal-three-colors(orange, yellow, 50%, orange);
+	border-top: 1px solid #703500;
+	padding: 6px 0;
+	#gradient > .horizontal-three-colors(#f78203, #fedf0e, 50%, #f78203);
 }
 
 .navbar-main {
