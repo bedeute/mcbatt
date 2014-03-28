@@ -1,6 +1,11 @@
+html {
+	position: relative;
+	min-height: 100%;
+}
+
 body {
 	background: #eee url("../img/pattern.jpg");
-	height: 100%;
+	margin-bottom: 30px;
 }
 
 @media (min-width: 768px) {
@@ -28,6 +33,12 @@ body {
 		#gradient > .horizontal-three-colors(orange, yellow, 50%, orange);
 
 	}		
+}
+
+.list-language {
+	position: absolute;
+	top:10px;
+	z-index: 1;
 }
 
 .container-bg {
@@ -103,21 +114,18 @@ body {
 	}
 }
 
-#wrap {
-    min-height: 100%;
-    height: auto !important;
-    height: 100%;
-    /* Negative indent footer by it's height */
-    margin: 0 auto -30px;
-  }
+.navbar-main {
+	.border-top-radius(16px);
+	.border-bottom-radius(16px);
+	#gradient > .vertical-three-colors(#FE7F18, #FBA14B, 50%, #FE7F18);
+}
 
-  /* Set the fixed height of the footer here */
-  #push,
-  #footer {
-    height: 30px;
-  }
 
-#footer {
+footer {
+	height: 30px;
+	position: absolute;
+	bottom: 0;
+	width: 100%;
 	font-size: 12px;
 	border-top: 1px solid blue;
 	padding: 8px 0;
